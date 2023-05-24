@@ -25,12 +25,12 @@ const Cart = () => {
   ];
   return (
     <div className="cart">
-      <h3>Products in your Cart</h3>
+      <h1>Products in your Cart</h1>
       {data?.map(item =>(
         <div className="item" key={item.id}>
             <img src={item.img} alt="" />
             <div className="details">
-            <h4>{item.title}</h4>
+            <h1>{item.title}</h1>
             <p>{item.desc.substring(0,100)}</p>
             <div className="price">
             1  x ${item.price}
@@ -40,11 +40,11 @@ const Cart = () => {
         </div>
       ))}
       <div className="total">
-      <span>SUBTOTOTAL</span>
+      <span>SUBTOTAL</span>
       <span>$125</span>
       </div>
       <button>Proceed</button>
-      <span>Reset Cart</span>
+      <span className="reset">Reset Cart</span>
     </div>
   );
 };
